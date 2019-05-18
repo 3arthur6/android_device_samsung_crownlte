@@ -1,0 +1,19 @@
+/system		ext4	/dev/block/platform/11120000.ufs/by-name/SYSTEM	flags=backup=1
+/system_image	emmc	/dev/block/platform/11120000.ufs/by-name/SYSTEM	flags=backup=0;display="System Image"
+/data		ext4	/dev/block/platform/11120000.ufs/by-name/USERDATA	flags=length=-20480,encryptable=footer
+/cache		ext4	/dev/block/platform/11120000.ufs/by-name/CACHE	flags=backup=1
+
+/dqmdbg		emmc	/dev/block/platform/11120000.ufs/by-name/DQMDBG flags=backup=1;display="DQMDBG Image";flashimg
+/boot		emmc	/dev/block/platform/11120000.ufs/by-name/BOOT	flags=backup=1;display="Kernel"
+/recovery	emmc	/dev/block/platform/11120000.ufs/by-name/RECOVERY	flags=backup=1;display="Recovery"
+
+/modem_debug	emmc	/dev/block/platform/11120000.ufs/by-name/CP_DEBUG	flags=backup=1;display="CPDEB (MODEM_DEBUG)"
+/modem		emmc	/dev/block/platform/11120000.ufs/by-name/RADIO	flags=backup=1;display="Baseband (MODEM)"
+/efs		ext4	/dev/block/platform/11120000.ufs/by-name/EFS	flags=backup=1;display="EFS"
+
+/vendor		ext4	/dev/block/platform/11120000.ufs/by-name/VENDOR	flags=backup=1;display="Vendor";wipeingui
+/vendor_image	emmc	/dev/block/platform/11120000.ufs/by-name/VENDOR	flags=backup=0;display="Vendor Image"
+/odm		ext4	/dev/block/platform/11120000.ufs/by-name/ODM	flags=backup=1;display="ODM";flashimg;wipeingui
+
+/external_sd	vfat	/dev/block/mmcblk0p1 /dev/block/mmcblk0	flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg	vfat	/dev/block/sdf1 /dev/block/sdf		flags=display="USB-OTG";storage;wipeingui;removable
