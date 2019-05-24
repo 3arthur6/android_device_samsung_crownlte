@@ -43,8 +43,11 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/crownlte/mkbootimg.mk
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --board SRPRA04A002RU --dt device/samsung/crownlte/prebuilt/dtb.img --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
-LZMA_RAMDISK_TARGETS := recovery
+BOARD_MKBOOTIMG_ARGS := --board SRPRA04A002RU --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
+BOARD_KERNEL_SEPARATED_DT := true
+TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/crownlte/dtbhconfig
+LZMA_RAMDISK_TARGETS := recoveryLZMA_RAMDISK_TARGETS := recovery
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
