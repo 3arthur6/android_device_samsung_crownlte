@@ -6,9 +6,9 @@
 /dev/block/platform/11120000.ufs/by-name/SYSTEM         /system     ext4    ro,errors=panic                                             wait
 /dev/block/platform/11120000.ufs/by-name/SYSTEM         /system     f2fs    ro,errors=panic                                             wait
 /dev/block/platform/11120000.ufs/by-name/CACHE          /cache      ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic       wait,check
-/dev/block/platform/11120000.ufs/by-name/CACHE          /cache      f2fs    noatime,nosuid,nodev,discard       wait,check
+/dev/block/platform/11120000.ufs/by-name/CACHE          /cache      f2fs    noatime,nosuid,nodev,discard,inline_xattr,inline_data,inline_dentry       wait,check
 /dev/block/platform/11120000.ufs/by-name/USERDATA       /data       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic       wait,check,encryptable=footer,quota
-/dev/block/platform/11120000.ufs/by-name/USERDATA       /data       f2fs    noatime,nosuid,nodev,discard       wait,check,encryptable=footer,quota
+/dev/block/platform/11120000.ufs/by-name/USERDATA       /data       f2fs    noatime,nosuid,nodev,discard,inline_xattr,inline_data,inline_dentry       wait,check,encryptable=footer,quota
 /dev/block/platform/11120000.ufs/by-name/EFS            /efs        ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic       wait,check
 /dev/block/platform/11120000.ufs/by-name/DQMDBG         /dqmdbg     ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic       wait,check
 
