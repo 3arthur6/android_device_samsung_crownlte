@@ -1,10 +1,16 @@
 on init
-    write /sys/block/mmcblk0/queue/scheduler noop
-    write /sys/block/mmcblk0/queue/iostats 0
-    write /sys/block/mmcblk0/queue/read_ahead_kb 8192
-    write /sys/block/mmcblk0/queue/nr_requests 128
+# Internal memory
+	write /sys/block/sda/queue/scheduler fiops
+	write /sys/block/sda/queue/rotational 0
+	write /sys/block/sda/queue/iostats 0
+	write /sys/block/sda/queue/read_ahead_kb 4096
+	write /sys/block/sda/queue/max_sectors_kb 8196
+	write /sys/block/sda/queue/nr_requests 256
 
-    write /sys/block/sda/queue/scheduler noop
-    write /sys/block/sda/queue/iostats 0
-    write /sys/block/sda/queue/read_ahead_kb 8192
-    write /sys/block/sda/queue/nr_requests 128
+# MicroSD/external memory
+	write /sys/block/mmcblk0/queue/scheduler fiops
+	write /sys/block/mmcblk0/queue/rotational 0
+	write /sys/block/mmcblk0/queue/iostats 0
+	write /sys/block/mmcblk0/queue/read_ahead_kb 512
+	write /sys/block/mmcblk0/queue/max_sectors_kb 4096
+	write /sys/block/mmcblk0/queue/nr_requests 80
