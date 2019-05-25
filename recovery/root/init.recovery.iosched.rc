@@ -12,5 +12,8 @@ on init
 	write /sys/block/mmcblk0/queue/rotational 0
 	write /sys/block/mmcblk0/queue/iostats 0
 	write /sys/block/mmcblk0/queue/read_ahead_kb 512
-	write /sys/block/mmcblk0/queue/max_sectors_kb 4096
+	write /sys/block/mmcblk0/queue/max_sectors_kb 2048
 	write /sys/block/mmcblk0/queue/nr_requests 80
+
+# Disable fsync
+	write /sys/module/sync/parameters/fsync_enabled N
