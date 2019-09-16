@@ -13,7 +13,7 @@ on init
 on boot
     write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "Galaxy Note9"
+    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
     write /sys/kernel/config/usb_gadget/g1/configs/c.1/strings/0x409/configuration "Conf 1"
     write /sys/kernel/config/usb_gadget/g1/configs/c.1/MaxPower 0x3f
     symlink /sys/kernel/config/usb_gadget/g1/functions/mtp.0 /sys/kernel/config/usb_gadget/g1/configs/c.1/mtp.0
