@@ -23,8 +23,8 @@ BOARD_SEPOLICY_VERS := 28.0
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/samsung/crownlte-els
-TARGET_KERNEL_CONFIG := crownlte-twrp-els_defconfig
+TARGET_KERNEL_CONFIG := exynos9810-crownlte-twrp-beta_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/universal9810
 # KERNEL_TOOLCHAIN := /path/to/your/gcc/bin
 # KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-gnu-
 
