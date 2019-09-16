@@ -13,7 +13,7 @@ on init
 on boot
     write /sys/kernel/config/usb_gadget/g1/strings/0x409/serialnumber ${ro.serialno}
     write /sys/kernel/config/usb_gadget/g1/strings/0x409/manufacturer ${ro.product.manufacturer}
-    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product ${ro.product.model}
+    write /sys/kernel/config/usb_gadget/g1/strings/0x409/product "Galaxy Note9"
     write /sys/kernel/config/usb_gadget/g1/configs/c.1/strings/0x409/configuration "Conf 1"
     write /sys/kernel/config/usb_gadget/g1/configs/c.1/MaxPower 0x3f
     symlink /sys/kernel/config/usb_gadget/g1/functions/mtp.0 /sys/kernel/config/usb_gadget/g1/configs/c.1/mtp.0
@@ -23,7 +23,7 @@ on boot
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/kernel/config/usb_gadget/g1/idVendor 0x04e8
+    write /sys/kernel/config/usb_gadget/g1/idVendor 0x04E8
     write /sys/kernel/config/usb_gadget/g1/idProduct 0x6860
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
@@ -33,28 +33,10 @@ on property:sys.usb.ffs.ready=1 && property:sys.usb.config=mtp,adb
 
 on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb
     write /sys/class/android_usb/android0/enable 0
-    write /sys/kernel/config/usb_gadget/g1/idVendor 0x18d1
-    write /sys/kernel/config/usb_gadget/g1/idProduct 0x4ee7
+    write /sys/kernel/config/usb_gadget/g1/idVendor 0x04E8
+    write /sys/kernel/config/usb_gadget/g1/idProduct 0x6860
     write /sys/class/android_usb/android0/functions ${sys.usb.config}
     write /sys/kernel/config/usb_gadget/g1/bDeviceClass 0
     write /sys/kernel/config/usb_gadget/g1/UDC "10c00000.dwc3"
     write /sys/class/android_usb/android0/enable 1
     setprop sys.usb.state ${sys.usb.config}
-	
-# USB data role changes
-on property:sys.usb.typec.data_role=device
-    write /sys/class/dual_role_usb/otg_default/data_role ${sys.usb.typec.data_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.data_role}
-
-on property:sys.usb.typec.data_role=host
-    write /sys/class/dual_role_usb/otg_default/data_role ${sys.usb.typec.data_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.data_role}
-
-# USB power role changes
-on property:sys.usb.typec.power_role=source
-    write /sys/class/dual_role_usb/otg_default/power_role ${sys.usb.typec.power_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.power_role}
-
-on property:sys.usb.typec.power_role=sink
-    write /sys/class/dual_role_usb/otg_default/power_role ${sys.usb.typec.power_role}
-    setprop sys.usb.typec.state ${sys.usb.typec.power_role}
