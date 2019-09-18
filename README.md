@@ -12,5 +12,5 @@ Clone this repo to device/samsung/crownlte
 
 ```sh
 . build/envsetup.sh
-lunch Note9-eng
+lunch omni_crownlte-eng
 make recoveryimage
