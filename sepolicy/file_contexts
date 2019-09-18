@@ -1,0 +1,2 @@
+# Fix type for /odm/omc/
+/odm/omc(/.*)?		u:object_r:omc_vendor_file:s0
