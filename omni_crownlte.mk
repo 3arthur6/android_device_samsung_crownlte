@@ -25,3 +25,4 @@ PRODUCT_DEVICE := crownlte
 PRODUCT_NAME := omni_crownlte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_MODEL := Galaxy Note9\
