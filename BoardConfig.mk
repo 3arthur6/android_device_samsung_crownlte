@@ -25,7 +25,7 @@ BOARD_SEPOLICY_DIRS := device/samsung/crownlte/sepolicy
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := exynos9810-crownlte-twrp_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/universal9810
+TARGET_KERNEL_SOURCE := kernel/samsung/crownlte
 # KERNEL_TOOLCHAIN := /path/to/your/gcc/bin
 # KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-gnu-
 
