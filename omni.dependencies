@@ -7,6 +7,12 @@
 	},
 	{
 		"remote":"github",
+		"repository":"3arthur6/android_external_busybox",
+		"target_path":"external/busybox",
+		"revision":"android-9.0"
+	},
+	{
+		"remote":"github",
 		"repository":"LineageOS/android_hardware_samsung",
 		"target_path":"hardware/samsung",
 		"revision":"lineage-16.0"

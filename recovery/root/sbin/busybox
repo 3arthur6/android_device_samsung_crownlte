@@ -1,3 +1,0 @@
-#!/sbin/sh
-function cmd() { case $* in awk* ) shift 1; command awk "$@" ;; dd* ) shift 1; command dd "$@" ;; egrep* ) shift 1; command egrep "$@" ;; fgrep* ) shift 1; command fgrep "$@" ;; grep* ) shift 1; command grep "$@" ;; sh* ) shift 1; command sh "$@" ;; unzip* ) shift 1; command unzip "$@" ;; zip* ) shift 1; command zip "$@" ;; * ) command toybox_static "$@" ;; esac }
-cmd "$@";
