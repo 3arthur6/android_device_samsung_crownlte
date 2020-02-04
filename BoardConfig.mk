@@ -19,6 +19,7 @@ TARGET_BOOTLOADER_BOARD_NAME := universal9810
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 BOARD_SEPOLICY_VERS := 28.0
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
@@ -33,7 +34,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/samsung/crownlte/mkbootimg.mk
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --board SRPRA04A003RU --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := --board SRPRA04A004KU --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/crownlte/dtbhconfig

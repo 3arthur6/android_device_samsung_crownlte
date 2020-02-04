@@ -1,4 +1,4 @@
-/system		ext4	/dev/block/platform/11120000.ufs/by-name/SYSTEM	flags=backup=1
+/system_root	ext4	/dev/block/platform/11120000.ufs/by-name/SYSTEM	flags=backup=1
 /system_image	emmc	/dev/block/platform/11120000.ufs/by-name/SYSTEM	flags=backup=0;flashimg
 /data		ext4	/dev/block/platform/11120000.ufs/by-name/USERDATA	flags=length=-20480,encryptable=footer
 /cache		ext4	/dev/block/platform/11120000.ufs/by-name/CACHE	flags=backup=1
