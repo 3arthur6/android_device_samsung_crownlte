@@ -1,2 +1,0 @@
-# Fix type for /odm/omc/
-type omc_vendor_file, vendor_file_type, file_type;
