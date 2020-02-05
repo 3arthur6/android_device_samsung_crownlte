@@ -1,6 +1,7 @@
 #!/sbin/sh
-busybox umount `echo $@ | sed '/system_root/! s/system/system_root/'`;
-if echo $@ | grep -q system ; then
-  rm -f /system >/dev/null 2>&1
-  rmdir /system >/dev/null 2>&1
-fi;
+busybox umount `echo $@ | sed '/system_root/! s/system/system_root/'`
+if echo $@ | grep -Fq /system ; then
+  rm -rf /system >/dev/null 2>&1
+  rm -rf /system/system >/dev/null 2>&1
+  rmdir -p /system >/dev/null 2>&1
+fi
