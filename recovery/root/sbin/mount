@@ -1,9 +1,7 @@
 #!/sbin/sh
-busybox mount `echo $@ | sed '/system_root/! s/system/system_root/'`
+busybox mount `echo $@ | sed 's/\b\/system\b/\/system_root/g'`
 if echo $@ | grep -Fq /system ; then
-  rm -rf /system >/dev/null 2>&1
-  rm -rf /system/system >/dev/null 2>&1
-  rmdir -p /system >/dev/null 2>&1
-  ln -s /system_root/system /system >/dev/null 2>&1
-  ln -s /system_root/system /system/system >/dev/null 2>&1
+  rm -rf /system
+  ln -fns /system_root/system /system
+  ln -fns /system_root/system /system/system
 fi
