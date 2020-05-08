@@ -26,18 +26,16 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := exynos9810-crownlte-twrp_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/crownlte
-# KERNEL_TOOLCHAIN := /path/to/your/gcc/bin
-# KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-gnu-
 
 # Build Recovery & DTB
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/crownlte/mkbootimg.mk
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --board SRPRA04A004KU --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := --board SRPRA04A005KU --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --second_offset 0x00f00000 --tags_offset 0x00000100
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/crownlte/dtbhconfig
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/crownlte/include
 LZMA_RAMDISK_TARGETS := recovery
 
 # File systems
@@ -54,7 +52,6 @@ TW_MAX_BRIGHTNESS := 25500
 TW_THEME := portrait_hdpi
 
 # TWRP
-RECOVERY_VARIANT := twrp
 TW_INCLUDE_NTFS_3G := true
 TW_EXCLUDE_SUPERSU := true
 TW_EXTRA_LANGUAGES := true
@@ -65,4 +62,5 @@ TW_USE_BUSYBOX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_ENCRYPTED_BACKUPS := true
 TW_DEVICE_VERSION := r3.6
+
 ALLOW_MISSING_DEPENDENCIES := true
