@@ -26,6 +26,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := exynos9810-crownlte-twrp_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/crownlte
+USE_CCACHE := true
 
 # Build Recovery & DTB
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/crownlte/mkbootimg.mk
